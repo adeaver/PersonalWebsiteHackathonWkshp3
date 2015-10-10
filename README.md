@@ -30,3 +30,26 @@ $("#some_text").on("click", function() {
 })
 
 ```
+
+#### Setting Up JQuery
+
+* To set up JQuery, all you have to do is include the following line of code somewhere in the `<head>` tag before any other JQuery.
+
+```<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>```
+
+* This will tell your browser how to compile JQuery. If you're getting syntax errors or 'key not found' errors, make sure you have this before any other JQuery
+
+#### Selectors
+
+* Selectors allow you to choose an element on the page to do some work on.
+* Selectors can be ids, classes, types of tags, or even the entire document.
+
+###### Examples of selectors
+
+```
+$("#some_text") // This is will select an element with the id 'some_text'
+$(".nav") // This will select every element in the class "nav"
+$("p") // This will select every paragraph tag on the page
+$(document) // This will select the entire document, this is only used for the $(document).ready() function, which will be discussed later
+
+```
