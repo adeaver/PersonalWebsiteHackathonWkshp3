@@ -50,6 +50,6 @@ $("#some_text").on("click", function() {
 $("#some_text") // This is will select an element with the id 'some_text'
 $(".nav") // This will select every element in the class "nav"
 $("p") // This will select every paragraph tag on the page
-$(document) // This will select the entire document, this is only used for the $(document).ready() function, which will be discussed later
+$(document) // We'll talk about this selector later
 
 ```
