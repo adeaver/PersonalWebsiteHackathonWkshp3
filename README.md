@@ -124,3 +124,65 @@ $("#header").on("click", function() {
 });
 
 ```
+
+#### What work can I do with JQuery?
+
+###### Changing HTML and CSS
+
+* To change the html of an element, use `.html("<h1>New HTML goes here</h1>")`
+* To change the text of an element, use `.text("New text goes here")`
+	* The difference between `.text()` and `.html()` is that .html() renders whatever you put in
+		* `.text("<h1>Website Title</h1>")` would cause you to see the text `<h1>Website Title</h1>` on the page
+		* `.html("<h1>Website Title</h1>")` would cause you to see `Website Title` on the page as an `<h1>` element
+* To change the CSS of the page, use `.css(property_name, property_value)`
+	* You can also assign multiple properties the same way you can use `.on()` to assign multiple events
+
+Example
+
+```
+
+// Changing the text inside of an element with the id "header" after hovering over it
+
+$("#header").click(function() {
+	$("header").text("New Title");
+});
+
+// Changing the text size and color of an element with the id "first_paragraph" after clicking a button
+
+$("#button").css({
+	"color": "red",
+	"font-size": "18pt"
+});
+
+```
+
+###### Hiding/Showing Elements
+
+* There are three functions that help to hide or show an element
+	* `.hide()` - This function hides the element it's operating on
+	* `.show()` - This function shows the element it's operating on
+	* `.toggle()` - This function switches between hiding and showing the element it's operating on
+
+Let's see it in action:
+
+```
+// Hiding an element with the id "header" after clicking the element with the id "button"
+
+$("#button").click(function() {
+	$("#header").hide();
+});
+
+// Showing an element with the id "header" after clicking the element with the id "button"
+
+$("#button").click(function() {
+	$("#header").show();
+});
+
+// Toggling the visibility of the element with the id "header" after clicking "button"
+
+$("#button").click(function() {
+	$("#header").toggle();
+});
+
+```
+
