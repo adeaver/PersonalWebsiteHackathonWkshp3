@@ -6,7 +6,7 @@
 * The following is a comparison of a function written in Javascript to hide an element and another function to do the same thing in JQuery
 
 ###### Javascript
-'''
+```
 function() hideOnClick(element) {
 	if(element.style.visibility == "hidden") {
 		element.style.visibility = "visible";
@@ -19,13 +19,13 @@ function() hideOnClick(element) {
 
 <p id="some_text" onclick="hideOnClick(this)"> ... </p>
 
-'''
+```
 
 ###### JQuery
 
-'''
+```
 $("#some_text").on("click", function() {
 	$("#some_text").toggle();
 })
 
-'''
+```
