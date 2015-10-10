@@ -69,7 +69,6 @@ $(document) // We'll talk about this selector later
 ###### Examples of events
 
 ```
-
 // Assigning click event to navbar class
 
 $(".navbar").click(function() { 
@@ -98,7 +97,6 @@ $("input").focus(function() {
 	* This function can also be used to assign single events
 
 ```
-
 // Doing work when the page loads
 
 $(document).ready(function() {
@@ -140,14 +138,15 @@ $("#header").on("click", function() {
 Example
 
 ```
-
-// Changing the text inside of an element with the id "header" after hovering over it
+// Changing the text inside of an element with
+// the id "header" after hovering over it
 
 $("#header").click(function() {
 	$("header").text("New Title");
 });
 
-// Changing the text size and color of an element with the id "first_paragraph" after clicking a button
+// Changing the text size and color of an element with 
+// the id "first_paragraph" after clicking a button
 
 $("#button").css({
 	"color": "red",
@@ -166,19 +165,22 @@ $("#button").css({
 Let's see it in action:
 
 ```
-// Hiding an element with the id "header" after clicking the element with the id "button"
+// Hiding an element with the id "header" 
+// after clicking the element with the id "button"
 
 $("#button").click(function() {
 	$("#header").hide();
 });
 
-// Showing an element with the id "header" after clicking the element with the id "button"
+// Showing an element with the id "header"
+// after clicking the element with the id "button"
 
 $("#button").click(function() {
 	$("#header").show();
 });
 
-// Toggling the visibility of the element with the id "header" after clicking "button"
+// Toggling the visibility of the element with 
+// the id "header" after clicking "button"
 
 $("#button").click(function() {
 	$("#header").toggle();
