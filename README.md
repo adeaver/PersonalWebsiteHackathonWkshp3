@@ -3,7 +3,8 @@
 #### What is JQuery and why do I need it?
 
 * JQuery is a Javascript Library that makes writing Javascript a lot easier
-* The following is a comparison of a function written in Javascript to hide an element and another function to do the same thing in JQuery
+
+The following is a comparison of a function written in Javascript to hide an element and another function to do the same thing in JQuery:
 
 ###### Javascript
 ```
