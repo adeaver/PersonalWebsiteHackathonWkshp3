@@ -188,3 +188,80 @@ $("#button").click(function() {
 
 ```
 
+###### Fading In/Out
+
+* Like hiding and showing elements, there are three functions that help to fade an element in or out
+	* `.fadeIn()` - This function causes an element to fade in
+	* `.fadeOut()` - This function causes an element to fade out
+	* `.fadeToggle()` - This function causes a hidden element to fade in and a visible element to fade out
+* All three functions take in a speed parameter to tell it how fast to fade out or fade in. Some values are:
+	* "fast"
+	* "slow"
+	* Time in miliseconds
+
+Examples
+
+```
+// Fading an element out after "button" has been clicked
+
+$("#button").click(function() {
+	$("#header").fadeOut("slow");
+});
+
+// Fading the same element in
+
+$("#button").click(function() {
+	$("#header").fadeIn("slow");
+});
+
+// Toggling the fade of that element
+
+$("#button").click(fucntion() {
+	$("#header").fadeToggle("slow");
+});
+```
+
+###### Sliding Up and Sliding Down
+
+* Works exactly like fading, there are three functions
+	* `.slideUp()`
+	* `.slideDown()`
+	* `.slideToggle()`
+* Takes in a speed parameter
+
+###### Animation
+
+
+#### Function Chaining
+
+Let's say that you wanted to make an element turn to red and change the text inside after it is clicked.
+It would look like this:
+
+```
+$("#some_text").click(function() {
+	$("#some_text").css("color", "red");
+	$("#some_text").text("This is new text");
+});
+```
+
+However, to make the code more concise and to (slightly) speed up runtime by avoidng making the program look for an element twice, you can do what is called "function chaining", which is a fancy name for putting on function right after another.
+
+```
+$("#some_text").click(function() {
+	$("#some_text").css("color", "red").text("This is new text");
+});
+```
+
+Note that this will start the functions right after the other, so it may appear that the text turns red and changes at the same time.
+
+#### Callback Functions
+
+What if you wanted to wait until after the text from the previous example turns red before changing what it says? There is a way to do that called a callback function. A callback function is just a function that gets called when another a function is done executing. Every function in JQuery takes an optional last parameter that is the callback function that will execute when it's done. So taking our previous example:
+
+```
+$("#some_text").click(function() {
+	$("#some_text").css("color", "red", function() {
+		$("#some_text").text("This is new text");
+	});
+});
+```
