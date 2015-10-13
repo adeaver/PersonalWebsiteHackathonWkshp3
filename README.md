@@ -231,6 +231,37 @@ $("#button").click(fucntion() {
 
 ###### Animation
 
+* Animation changes the CSS of an object smoothly
+* Works with the `.animate()` function
+	* First parameter is the CSS parameters
+	* Second parameter is speed
+* Can take absolute or relative values
+
+Example
+```
+
+// Using absolute values
+
+$("#button").click(function() {
+	$("#content").animate({
+		"width":"150px",
+		"left":"200px"
+	}, "slow");
+});
+
+// Using relative values
+
+$("#button").click(function() {
+	$("#content").animate({
+		"width":"+=150px",
+		"left":"+=200px"
+	}, "slow");
+});
+```
+
+* The difference between the two examples
+	* The first example changes the width of the element to 150px, and changes the left position to 200px
+	* The second example increases the width of the element by 150px and shifts the left position by 200px (this is actually a shift right since the left most position shifts over by 200px)
 
 #### Function Chaining
 
