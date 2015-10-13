@@ -65,7 +65,8 @@ $(document) // We'll talk about this selector later
 	* dblclick - fires when element has been clicked twice
 	* mouseenter - fires when mouse goes over an element
 	* mouseleave - fires when mouse leaves an element
-	* hover - fires when mouse goes over an element, then reverts when mouse leaves
+	* hover - combines mouseenter and mouseleave
+		* hover takes two function parameters, one for when the mouse enters, and one for one it leaves
 	* focus - fires when an element has focus (i.e., input is being typed into)
 	* blur - fires when an element loses focus
 
@@ -80,7 +81,9 @@ $(".navbar").click(function() {
 
 // Assigning hover event to the element with id "hover_here"
 $("#hover_here").hover(function() {
-	// code goes here
+	// mouseenter code goes here
+}, function() {
+	// mouseleave code goes here
 });
 
 // Assigning focus event to all inputs
@@ -235,6 +238,26 @@ $("#button").click(fucntion() {
 	* `.slideDown()`
 	* `.slideToggle()`
 * Takes in a speed parameter
+* Typically used on lists
+
+Example:
+
+######## HTML
+```
+<p id="title">Click Me!</p>
+<ol id="slide_menu" style="display:none;">
+	<li>List Element</li>
+	<li>List Element</li>
+	<li>List Element</li>
+</ol>
+```
+
+######## JQuery
+```
+$("#title").click(function() {
+	$("#slide_menu").slideToggle("slow");
+});
+```
 
 ###### Animation
 
