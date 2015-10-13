@@ -242,18 +242,18 @@ $("#button").click(fucntion() {
 
 Example:
 
-* HTML
 ```
+// HTML
+
 <p id="title">Click Me!</p>
 <ol id="slide_menu" style="display:none;">
 	<li>List Element</li>
 	<li>List Element</li>
 	<li>List Element</li>
 </ol>
-```
 
-* JQuery
-```
+// JQuery
+
 $("#title").click(function() {
 	$("#slide_menu").slideToggle("slow");
 });
