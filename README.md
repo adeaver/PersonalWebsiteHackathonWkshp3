@@ -3,16 +3,17 @@
 #### What is JQuery and why do I need it?
 
 * JQuery is a Javascript Library that makes writing Javascript a lot easier
+* JQuery is the easiest way to do animation
 
 The following is a comparison of a function written in Javascript to hide an element and another function to do the same thing in JQuery:
 
 ###### Javascript
 ```
 function() hideOnClick(element) {
-	if(element.style.visibility == "hidden") {
-		element.style.visibility = "visible";
+	if(element.style.display != "none") {
+		element.style.display = "none";
 	} else {
-		element.style.visibility = "hidden";
+		element.style.display = "block";
 	}
 }
 
@@ -25,9 +26,11 @@ function() hideOnClick(element) {
 ###### JQuery
 
 ```
-$("#some_text").on("click", function() {
-	$("#some_text").toggle();
-})
+$(document).ready(function() {
+	$("#some_text").on("click", function() {
+		$("#some_text").toggle();
+	});
+});
 
 ```
 
@@ -92,36 +95,40 @@ $("input").focus(function() {
 * ready
 	* This function can only be called after the document selector, this is the only time you'll use the $(document) selector
 	* This event fires after the page has been loaded, which is useful if you want to do some work right at the beginning
+	* This event is required to assign any events to any elements on the page
 * on
 	* This function is how you assign multiple events to an element
 	* This function can also be used to assign single events
 
 ```
-// Doing work when the page loads
+// Doing work when the page loads - like assigning events
 
 $(document).ready(function() {
-	// code goes here
-});
 
-// Assigning click and hover functions to the id "header"
+	// Assigning click and hover functions to the id "header"
+	// Assigning events is always done inside the $(document).ready() function
 
-$("#header").on({
-	"click": function() {
-		// code for click goes here
-	},
-	"hover": function() {
-		// code for hover goes here
-	}
-});
+	$("#header").on({
+		"click": function() {
+			// code for click goes here
+		},
+		"hover": function() {
+			// code for hover goes here
+		}
+	});
 
-// Assigning just click function for "header" id
+	// Assigning just click function for "header" id
 
-$("#header").on("click", function() {
-	// code goes here
-	// Notice that there are no brackets after .on
+	$("#header").on("click", function() {
+		// code goes here
+		// Notice that there are no brackets after .on
+	});
+
 });
 
 ```
+
+* To be more concise, I've left out the $(document).ready() function in future examples
 
 #### What work can I do with JQuery?
 
